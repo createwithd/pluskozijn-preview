@@ -66,6 +66,7 @@ fieldset{border:0;padding:0;margin:0}legend{font-weight:800;margin-bottom:8px}le
 .vm.klein{aspect-ratio:auto;height:300px;max-width:170px;margin:0 0 14px}.vm.klein figcaption{font-size:12.5px;padding:24px 8px 8px}
 .d2 .vm.d2v{aspect-ratio:4/5;border-radius:8px}.d2 .vm.d2v figcaption{font-size:13px}
 .mc2{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}.mc2>*{min-width:0}.mc2 .vm{aspect-ratio:9/16}.mc2 .lbl img{width:100%;height:100%;object-fit:contain;background:#fff;border-radius:10px}
+.adv{display:flex;gap:12px;align-items:flex-start;background:#EEF2F8;border-radius:8px;padding:12px}.adv img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none;border:2px solid #fff}.adv b{display:block;color:var(--ink)}.adv small{display:block;color:var(--mut);font-size:14px;line-height:1.4}.advv{margin-top:6px;border:0;background:none;padding:0;color:var(--ink);font-weight:800;text-decoration:underline}
 /* kleuren */
 .kz{display:grid;grid-template-columns:1.4fr .6fr;gap:26px;align-items:center}.kz figure{margin:0;position:relative}.kz figure img{border-radius:8px;width:100%}
 .kz figcaption{position:absolute;left:12px;bottom:12px;background:#fff;color:var(--ink);font-weight:800;padding:6px 12px;border-radius:4px}
@@ -125,6 +126,7 @@ body.zonder .nt{display:none}.ntk{position:fixed;right:14px;bottom:84px;z-index:
 <fieldset><legend>Kleur</legend><div class="kl"><img id="klMini" src="img/kl/antraciet.jpg" alt="Kleurvoorbeeld"><div><div class="kln" id="klNaam">Antracietgrijs <small>Binnen en buiten apart te kiezen</small></div><div class="sws" style="margin-top:6px"><button type="button" class="sw" style="--c:#383E42" aria-pressed="true" data-k="antraciet" data-n="Antracietgrijs" aria-label="Antracietgrijs"></button><button type="button" class="sw" style="--c:#F4F4F1" aria-pressed="false" data-k="wit" data-n="Wit" aria-label="Wit"></button><button type="button" class="sw" style="--c:#1B2638" aria-pressed="false" data-k="blauw" data-n="Donkerblauw" aria-label="Donkerblauw"></button><button type="button" class="sw" style="--c:#27352A" aria-pressed="false" data-k="groen" data-n="Donkergroen" aria-label="Donkergroen"></button><button type="button" class="sw" style="--c:#0F2620" aria-pressed="false" data-k="monument" data-n="Monumentengroen" aria-label="Monumentengroen"></button></div></div></div></fieldset>
 <button type="button" class="btn groot" data-open>Plan een gratis adviesgesprek</button>
 <ul class="chk"><li>Warmer en minder gehorig</li><li>Lagere energierekening</li><li>Onderhoudsarm: geen schilderwerk meer</li><li>Hogere woningwaarde</li></ul>
+<div class="adv"><img src="img/michael.jpg" alt="Michael, adviseur bij Pluskozijn"><div><b>Michael komt bij je langs</b><small>Adviseur en vast aanspreekpunt bij Pluskozijn. Meet bij je thuis op, laat stalen zien en denkt mee over kleur, glas en subsidie.</small><button type="button" class="advv" id="vkMichael">▶ Bekijk Michael (16 sec)</button></div></div>
 <button type="button" class="vk" id="vkKlant"><img src="vid/ad-26.jpg" alt=""><span><b>Bekijk wat een klant ervan vindt</b><small>Video, met geluid</small></span><span class="pp">▶</span></button>
 <p class="mini termijn"><b>Ook in termijnen te betalen, vanaf €35 per maand.</b></p><p class="mini">Liever eerst bellen? <a href="tel:+31553034990">055 303 49 90</a></p>
 </div></section>
@@ -266,6 +268,7 @@ const io=new IntersectionObserver(es=>es.forEach(en=>{const v=en.target;if(en.is
 document.querySelectorAll('.vm video').forEach(v=>io.observe(v));
 document.querySelectorAll('.vm').forEach(f=>f.addEventListener('click',()=>{const v=f.querySelector('video');const aan=v.muted;document.querySelectorAll('.vm video').forEach(x=>{x.muted=true;x.closest('.vm').classList.remove('aan')});
  if(aan){v.muted=false;v.currentTime=0;v.play();f.classList.add('aan')}}));
+document.getElementById('vkMichael').addEventListener('click',()=>{sv.src='vid/b-werkwijze.mp4';sv.hidden=false;pilsEl.innerHTML='';document.querySelectorAll('.th').forEach(x=>x.setAttribute('aria-pressed','false'));sv.muted=false;sv.currentTime=0;sv.play().catch(()=>{});document.querySelector('.stage').scrollIntoView({behavior:'smooth',block:'center'})});
 document.getElementById('vkKlant').addEventListener('click',()=>{document.getElementById('thKlant').click();sv.muted=false;sv.currentTime=0;sv.play().catch(()=>{});document.querySelector('.stage').scrollIntoView({behavior:'smooth',block:'center'})});
 document.getElementById('ntk').addEventListener('click',()=>{document.body.classList.toggle('zonder');document.getElementById('ntk').textContent=document.body.classList.contains('zonder')?'Uitleg tonen':'Uitleg verbergen'});
 </script>
