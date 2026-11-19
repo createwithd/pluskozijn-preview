@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
 <title>Pluskozijn prijsberekening</title>
-<meta name="description" content="Bereken direct een richtprijs voor je nieuwe kunststof kozijnen, inclusief subsidie-indicatie en besparing per maand.">
+<meta name="description" content="Bereken direct een richtprijs voor je nieuwe kunststof kozijnen, en zie wat je per maand bespaart.">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap" rel="stylesheet">
 <style>
@@ -38,7 +38,7 @@ form{display:grid;gap:10px}form label{display:flex;flex-direction:column;font-we
 </style></head><body>
 <header><div class="w"><a href="index.html"><img src="img/logo.png" alt="Pluskozijn kunststof kozijnen"></a><a class="tel" href="tel:+31553034990">055 303 49 90</a></div></header>
 <div class="hero"><div class="w"><span class="eye">Prijs in 1 minuut</span><h1>Bereken direct je prijs voor <span>nieuwe kunststof kozijnen</span></h1>
-<p>Kies je ramen, deuren en kleur en zie meteen een richtprijs, je subsidie-indicatie en wat je per maand bespaart. Inclusief Vierplus®-glas, montage en btw.</p></div></div>
+<p>Kies je ramen, deuren en kleur en zie meteen een richtprijs en wat je per maand bespaart. Inclusief Vierplus®-glas, montage en btw.</p></div></div>
 <div class="w grid">
 <div class="kaart cfg"><div class="voort" id="voort"></div>
 <section class="stp"><span class="eye">Stap 1 · Ramen</span><h2>Welke ramen wil je vervangen?</h2><p>Zoek het type dat op jouw raam lijkt en tel het aantal op.</p><div class="opts"><div class="opt" data-g="raam" data-k="klein"><div class="ic"><svg viewBox="0 0 120 90" aria-hidden="true"><rect x="4" y="4" width="112" height="82" rx="3" fill="var(--kz)" /><rect x="12" y="12" width="96" height="66" fill="#DCEAF5"/><path d="M16 72 L100 18" stroke="#fff" stroke-width="3" opacity=".7"/></svg></div><div class="ot"><b>Klein raam</b><small>0,70 × 0,70 m</small><span>Toilet, badkamer of kelder</span></div>
@@ -55,21 +55,20 @@ form{display:grid;gap:10px}form label{display:flex;flex-direction:column;font-we
 <section class="stp"><span class="eye">Stap 3 · Kleur</span><h2>Welke kleur wordt het?</h2><p>Onze voorraadkleuren, met houtnerf aan de buitenkant. Binnen en buiten kunnen verschillen.</p><div class="kls"><button type="button" class="kl" data-k="antraciet" data-n="Antracietgrijs" aria-pressed="true"><i style="background:#383E42"></i>Antracietgrijs</button><button type="button" class="kl" data-k="wit" data-n="Wit" aria-pressed="false"><i style="background:#F4F4F1"></i>Wit</button><button type="button" class="kl" data-k="blauw" data-n="Donkerblauw" aria-pressed="false"><i style="background:#1B2638"></i>Donkerblauw</button><button type="button" class="kl" data-k="groen" data-n="Donkergroen" aria-pressed="false"><i style="background:#27352A"></i>Donkergroen</button><button type="button" class="kl" data-k="monument" data-n="Monumentengroen" aria-pressed="false"><i style="background:#0F2620"></i>Monumentengroen</button></div><div class="klfoto"><img id="klImg" src="img/kl/antraciet.jpg" alt="Gevel in de gekozen kleur"></div></section>
 <section class="stp"><span class="eye">Stap 4 · Hoeken</span><h2>Hoe wil je de hoeken?</h2><p>Bij verstek lopen de profielen schuin op elkaar. De houtlookverbinding is haaks, zoals bij een houten kozijn.</p>
 <div class="keus" data-v="hoek"><button type="button" data-w="verstek" aria-pressed="true"><b>Verstek</b><span>De vertrouwde schuine verbinding. Standaard.</span></button><button type="button" data-w="hvl" aria-pressed="false"><b>Houtlookverbinding</b><span>Haakse hoeken, van dichtbij bijna niet van hout te onderscheiden.</span></button></div></section>
-<section class="stp"><span class="eye">Stap 5 · Subsidie</span><h2>Heb je je huis ook op een andere manier geïsoleerd?</h2><p>Combineer je nieuwe kozijnen met een tweede maatregel (zoals spouwmuur-, dak- of vloerisolatie), dan is de ISDE-subsidie per m² glas twee keer zo hoog.</p>
-<div class="keus" data-v="combi"><button type="button" data-w="ja" aria-pressed="false"><b>Ja, of dat ben ik van plan</b><span>Dan rekenen we met het hogere bedrag.</span></button><button type="button" data-w="nee" aria-pressed="false"><b>Nee</b><span>Dan rekenen we met het basisbedrag.</span></button><button type="button" data-w="weet" aria-pressed="false"><b>Weet ik niet</b><span>De adviseur zoekt het met je uit.</span></button></div></section>
+
 <section class="stp"><span class="eye">Jouw prijs</span><h2>Dit is jouw richtprijs</h2>
-<div class="res"><div><small>Richtprijs</small><b id="rPrijs">–</b></div><div class="groen"><small>Subsidie-indicatie</small><b data-sub>–</b></div><div><small>Bespaart op energie</small><b data-bes>–</b></div></div>
-<p><b>Na subsidie:</b> <span id="netto">–</span> · Glasoppervlak: <span id="rM2">–</span> · <b>Of betaal in termijnen, vanaf €35 per maand.</b></p>
+<div class="res"><div><small>Richtprijs</small><b id="rPrijs">–</b></div><div><small>In termijnen</small><b>vanaf € 72,95 p/m</b></div><div class="groen"><small>Bespaart op energie</small><b data-bes>–</b></div></div>
+<p>Glasoppervlak: <span id="rM2">–</span></p>
 <ul class="chk"><li>Inclusief Vierplus®-glas, montage en btw</li><li>Isoleert tot 3x beter dan HR++</li><li>Onderhoudsarm: nooit meer schilderen</li></ul>
-<h3 style="font-size:26px;margin-top:8px">Wil je een exacte prijs? Plan een gratis adviesgesprek</h3><p style="color:var(--mut);margin:4px 0 12px">Onze adviseur komt langs, meet alles op en checkt je subsidie.</p>
+<h3 style="font-size:26px;margin-top:8px">Wil je een exacte prijs? Plan een gratis adviesgesprek</h3><p style="color:var(--mut);margin:4px 0 12px">Onze adviseur komt langs en meet alles op. Dan krijg je een offerte op maat.</p>
 <form id="aanvraag"><label>Naam<input required autocomplete="name"></label><label>Telefoon<input type="tel" required minlength="10" autocomplete="tel"></label><label>E-mail<input type="email" required autocomplete="email"></label><label>Postcode en huisnummer<input required autocomplete="postal-code"></label><input id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><button class="btn groot" type="submit">Plan mijn gratis adviesgesprek</button></form>
 <div class="dank" id="dank">Bedankt! We bellen je zo snel mogelijk. (Preview: er is niets verstuurd.)</div></section>
 <div class="nav"><button type="button" class="btn sec" id="terug">← Terug</button><button type="button" class="btn" id="verder">Volgende</button></div>
 </div>
 <aside class="sam kaart"><h3>Jouw kozijnen</h3><ul id="lijst"></ul>
-<div class="prijs"><small>Richtprijs incl. montage en btw</small><b id="pr">–</b><div class="pm">Of vanaf €35 per maand</div></div>
-<ul><li><span>Subsidie-indicatie</span><b data-sub>–</b></li><li><span>Besparing</span><b data-bes>–</b></li></ul>
-<p class="mini">Indicatie, geen offerte. De exacte prijs hangt af van maten en situatie; de adviseur meet alles bij je thuis op. Subsidie: ISDE 2026, triple glas of beter in nieuwe kozijnen, € 111 per m² (€ 222 met een tweede maatregel), 3 tot 45 m². Vanaf 1 januari 2027 daalt dit naar € 55 per m². Besparing: indicatie op basis van ons rekenvoorbeeld.</p></aside>
+<div class="prijs"><small>Richtprijs incl. montage en btw</small><b id="pr">–</b><div class="pm">Of vanaf €72,95 per maand</div></div>
+<ul><li><span>Besparing</span><b data-bes>–</b></li></ul>
+<p class="mini">Indicatie, geen offerte. De exacte prijs hangt af van maten en situatie; de adviseur meet alles bij je thuis op. Besparing: indicatie op basis van ons rekenvoorbeeld.</p></aside>
 </div>
 <script>
 const D={"ramen": {"klein": {"n": "Klein raam", "m2": 0.45}, "1vak": {"n": "1-vaks raam", "m2": 1.4}, "2vak": {"n": "2-vaks raam", "m2": 1.9}, "3vak": {"n": "3-vaks raam", "m2": 2.6}, "groot": {"n": "Woonkamerraam", "m2": 4.0}, "dakkapel": {"n": "Dakkapel", "m2": 2.2}}, "deuren": {"voordeur": {"n": "Voordeur", "m2": 0.5}, "achterdeur": {"n": "Achterdeur", "m2": 0.9}, "tuindeur": {"n": "Openslaande tuindeuren", "m2": 2.6}}, "prijs": {"per_m2": 640, "min_raam": 690, "voordeur": 2650, "achterdeur": 1950, "tuindeur": 3400, "kleur_toeslag": 0.08, "hvl_toeslag": 0.05, "marge": 0.12}, "sub": {"per_m2": 111, "per_m2_combi": 222, "min_m2": 3, "max_m2": 45}, "bes": 5.0, "kz": {"antraciet": "#383E42", "wit": "#F4F4F1", "blauw": "#1B2638", "groen": "#27352A", "monument": "#0F2620"}};const st={raam:{},deur:{},kleur:'antraciet',hoek:'verstek',combi:null};
@@ -82,11 +81,11 @@ function bereken(){let m2=0,raam=0,aant=0;for(const[k,n]of Object.entries(st.raa
 function teken(){const r=bereken();const li=[];for(const[k,n]of Object.entries(st.raam))if(n)li.push(`<li>${n}× ${D.ramen[k].n}</li>`);for(const[k,n]of Object.entries(st.deur))if(n)li.push(`<li>${n}× ${D.deuren[k].n}</li>`);
  document.getElementById('lijst').innerHTML=li.length?li.join('')+`<li><span>Kleur</span>${document.querySelector('.kl[aria-pressed=true]').dataset.n}</li><li><span>Hoeken</span>${st.hoek==='hvl'?'Houtlookverbinding':'Verstek'}</li>`:'<li class="leeg">Nog niets gekozen</li>';
  document.getElementById('pr').textContent=r.aant?eur(r.laag)+' – '+eur(r.hoog):'–';
- document.querySelectorAll('[data-sub]').forEach(x=>x.textContent=r.sub?'tot '+eur(r.sub):'–');
+ 
  document.querySelectorAll('[data-bes]').forEach(x=>x.textContent=r.aant?'± '+eur(r.bes)+' p/m':'–');
  document.getElementById('rPrijs').textContent=r.aant?eur(r.laag)+' – '+eur(r.hoog):'–';
  document.getElementById('rM2').textContent=r.m2?r.m2.toFixed(1).replace('.',',')+' m²':'–';
- document.getElementById('netto').textContent=r.aant?eur(Math.max(0,r.laag-r.sub))+' – '+eur(Math.max(0,r.hoog-r.sub)):'–';}
+}
 document.querySelectorAll('.opt').forEach(o=>{const g=o.dataset.g,k=o.dataset.k,out=o.querySelector('output');const zet=n=>{st[g][k]=Math.max(0,Math.min(30,n));out.textContent=st[g][k];o.classList.toggle('heeft',st[g][k]>0);teken()};
  o.querySelector('.plus').addEventListener('click',()=>zet((st[g][k]||0)+1));o.querySelector('.min').addEventListener('click',()=>zet((st[g][k]||0)-1));});
 document.querySelectorAll('.kl').forEach(b=>b.addEventListener('click',()=>{st.kleur=b.dataset.k;document.querySelectorAll('.kl').forEach(x=>x.setAttribute('aria-pressed',x===b));document.documentElement.style.setProperty('--kz',D.kz[b.dataset.k]);document.getElementById('klImg').src='img/kl/'+b.dataset.k+'.jpg';teken()}));
